@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpsUsed++;
             DoJump(doubleJumpForce, jumpParticleSystem);
-            anim.SetTrigger("DoubleJump");
+            //anim.SetTrigger("DoubleJump");
         }
 
         //  if (CheckIsGrounded() == true)
