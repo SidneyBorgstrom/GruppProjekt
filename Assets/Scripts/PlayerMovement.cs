@@ -18,6 +18,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioClip[] jumpSounds;
     [SerializeField] private ParticleSystem jumpParticleSystem;
 
+
+    // Försök till doublejump
+    [SerializeField] private int maxJumps = 2;
+    [SerializeField] private float doubleJumpForce = 200f;
+    private int jumpsUsed = 0;
+
     bool canMove = true;
 
     private AudioSource audioSource;
@@ -43,7 +49,14 @@ public class PlayerMovement : MonoBehaviour
 
         anim.SetFloat("MoveSpeed", Mathf.Abs(rgbd.linearVelocity.x));
         anim.SetFloat("VerticalSpeed", rgbd.linearVelocity.y);
-        anim.SetBool("IsGrounded", CheckIsGrounded());
+
+        bool grounded = CheckIsGrounded();
+        anim.SetBool("IsGrounded", grounded);
+
+        if (grounded)
+        {
+            jumpsUsed = 0;
+        }
 
         if (moveDirection < 0f)
         {
@@ -79,10 +92,43 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump(InputAction.CallbackContext context)
     {
-        if (CheckIsGrounded() == true)
+        bool grounded = CheckIsGrounded();
+
+        if (grounded)
         {
-            rgbd.AddForce(new Vector2(0, jumpForce));
-            jumpParticleSystem.Play();
+            jumpsUsed = 1;
+            DoJump(jumpForce, jumpParticleSystem);
+            return;
+        }
+
+        if (jumpsUsed < maxJumps)
+        {
+            jumpsUsed++;
+            DoJump(doubleJumpForce, jumpParticleSystem);
+            anim.SetTrigger("DoubleJump");
+        }
+
+        //  if (CheckIsGrounded() == true)
+        // {
+        // rgbd.AddForce(new Vector2(0, jumpForce));
+        //jumpParticleSystem.Play();
+        //int randomJumpSound = UnityEngine.Random.Range(0, jumpSounds.Length);
+        //audioSource.PlayOneShot(jumpSounds[randomJumpSound]);
+        // }
+    }
+
+    private void DoJump(float force, ParticleSystem particles)
+    {
+        rgbd.linearVelocity = new Vector2(rgbd.linearVelocity.x, 0f);
+        rgbd.AddForce(new Vector2(0, force));
+
+        if(particles != null)
+        {
+            particles.Play();
+        }
+
+        if(jumpSounds.Length > 0)
+        {
             int randomJumpSound = UnityEngine.Random.Range(0, jumpSounds.Length);
             audioSource.PlayOneShot(jumpSounds[randomJumpSound]);
         }
