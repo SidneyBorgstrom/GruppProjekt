@@ -40368,6 +40368,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 79319f225a332204580a5950c986699d, type: 3}
   - {fileID: 8300000, guid: bb4bf2874296eb94ba90843a5af22731, type: 3}
   jumpParticleSystem: {fileID: 208121899}
+  maxJumps: 2
+  doubleJumpForce: 200
 --- !u!95 &668929062
 Animator:
   serializedVersion: 7
@@ -57128,7 +57130,7 @@ Transform:
   m_GameObject: {fileID: 1067338720}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.7, z: 4}
+  m_LocalPosition: {x: -26, y: -1.7, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
