@@ -111176,8 +111176,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Health
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4289cbd28069cf546aa741a957da7d97, type: 2}
-  m_sharedMaterial: {fileID: 1599651733416195396, guid: 4289cbd28069cf546aa741a957da7d97, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -115092,7 +115092,7 @@ MonoBehaviour:
   panel: {fileID: 407103280}
   finishedText: {fileID: 608409650}
   unfinishedText: {fileID: 429483703}
-  levelIndex: 0
+  levelIndex: 4
 --- !u!61 &1360348330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -131286,8 +131286,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4289cbd28069cf546aa741a957da7d97, type: 2}
-  m_sharedMaterial: {fileID: 1599651733416195396, guid: 4289cbd28069cf546aa741a957da7d97, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
