@@ -222,7 +222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A game made by: Sidney Borgstr\xF6m\n\nAssets from: Pixel Adventure 1 by Pixel Frog, Tree Animated by Toffeecraft, and Slime Mob Pack by FantasyBytesEntertainment "
+  m_text: "A game made by: Sidney Borgstr\xF6m, Alexander Gustafsson, Jade Hnasson\n\nAssets from: Pixel Adventure 1 by Pixel Frog, Tree Animated by Toffeecraft, and Slime Mob Pack by FantasyBytesEntertainment "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4289cbd28069cf546aa741a957da7d97, type: 2}
   m_sharedMaterial: {fileID: 1599651733416195396, guid: 4289cbd28069cf546aa741a957da7d97, type: 2}
